@@ -2,7 +2,10 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, "core/index.html")
+    return render(
+        request,
+        mime="txt/css"
+        "core/index.html")
 
 def scanner(request):
     return render(request, "core/scanner.html")
