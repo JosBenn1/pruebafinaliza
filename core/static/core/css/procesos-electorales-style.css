@@ -1,0 +1,14 @@
+/* Procesos electorales content */
+
+main {
+    height: calc(100% - var(--footer-height));
+    justify-content: space-evenly;
+}
+
+
+/* Lista de procesos electorales */
+.proceso-electoral {
+    border: 1px solid black;
+    height: 40px;
+    padding: 10px;
+}

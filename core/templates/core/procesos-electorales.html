@@ -1,0 +1,34 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Indentificate {% endblock %}
+
+{% block head-extra %}
+    <link href="{% static 'core/css/procesos-electorales-style.css' %}" rel="stylesheet" >
+{% endblock %}
+
+{% block content %}
+<main>
+    <div id="message">
+        <h3>Procesos electorales aplicables</h3>
+        {% if num_procesos > 1 %}
+            <p>Se encontraron {{ num_procesos }} procesos electorales en los que podrás participar:</p>
+        {% elif num_procesos == 1  %}
+            <p>Se encontró 1 proceso electoral en el que podrás participar:</p>
+        {% else %}
+            <p>No se encontraron procesos electorales aplicables.</p>
+        {% endif %}
+
+        <div id="lista-procesos">
+            {% if num_procesos > 0 %}
+                {% for proceso in procesos_electorales %}
+                    <div class="proceso-electoral">
+                        <a href="#">{{ proceso.nombre }} {{ proceso.anio }}</a>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</main>
+{% endblock %}

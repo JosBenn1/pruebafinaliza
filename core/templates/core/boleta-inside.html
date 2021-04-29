@@ -1,0 +1,48 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Boleta digital {% endblock %}
+
+{% block head-extra %}
+    <link  rel="stylesheet" href="{% static 'core/css/boleta-style.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <h3>Boleta: presidente</h3>
+    <p>Selecciona un(a) candidato(a):</p>
+    <!-- lista de tipos de candidatos -->
+    <div id="lista-candidatos">
+        <div href="#" id="candidato-a" class="candidato">
+            <div class="logo-partido">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmir-s3-cdn-cf.behance.net%2Fproject_modules%2F1400%2Fed19b536137871.5710516394e6b.jpg&f=1&nofb=1" alt="">
+            </div>
+            <div class="description">
+                <h4>PARTIDO POLÍTICO NACIONAL</h4>
+                <p>Propietario: {{ candidato.propietario }}</p>
+                <p>Suplente: {{ candidato.suplente }}</p>
+            </div>
+        </div>
+
+        <div href="#" id="candidato-a" class="candidato">
+            <div class="logo-partido">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmir-s3-cdn-cf.behance.net%2Fproject_modules%2F1400%2Fed19b536137871.5710516394e6b.jpg&f=1&nofb=1" alt="">
+            </div>
+            <div class="description">
+                <h4>PARTIDO POLÍTICO NACIONAL</h4>
+                <p>Propietario: {{ candidato.propietario }}</p>
+                <p>Suplente: {{ candidato.suplente }}</p>
+            </div>
+        </div>
+
+        <div href="#" id="candidato-libre">
+            <h4> SI DESEA VOTAR POR ALGÚN CANDIDATO NO REGISTRADO, ESCRIBA EN ESTE RECUADRO EL NOMBRE COMPLETO</h4>
+            <input type="text">
+        </div>
+    </div>
+    <!-- Opciones -->
+    <!-- <button id="confirmar-btn">Click aquí para confirmar y regresar.</button> -->
+    <a href="/boleta/" id="confirmar-btn" class="btn btn-success">Click aquí para confirmar y regresar.</a>
+</main>
+{% endblock %}

@@ -1,0 +1,112 @@
+/* Global */
+
+:root {
+    --header-height: 130px;
+    --footer-height: 80px;
+}
+
+html,
+body {
+    text-align: center;
+    background-color: rgb(247, 243, 238);
+    height: 100%;
+    font-size: 20px;
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+h1#home-title {
+    font-size: 30px;
+    margin: 5px;
+}
+
+
+/* Header */
+
+header {
+    height: var(--header-height);
+    display: flex !important;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: column wrap;
+    padding: 10px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+header img {
+    height: 30px;
+}
+
+header h1 {
+    display: block;
+}
+
+
+/* Main */
+
+main {
+    display: flex !important;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap:  wrap;
+    overflow: scroll;
+    padding: 2%;
+}
+
+#ayuda {
+    display: block;
+}
+
+#verify-user {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    min-height: 80%;
+}
+
+#verify-user svg#camera {
+    display: block;
+    max-height: 20px;
+}
+
+#scan-btn {
+    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#scan-btn,
+#manual-verify {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* footer */
+
+footer {
+    height: var(--footer-height);
+    padding: 10px;
+    border-top: 1px solid rgb(230, 230, 230);
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer a {
+    width: 100%;
+}

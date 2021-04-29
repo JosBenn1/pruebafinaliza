@@ -1,0 +1,102 @@
+main {
+    height: calc(100% - var(--footer-height));
+    display: flex;
+}
+
+h3 {
+    display: block;
+    width: 100%;
+}
+
+/* lista tipos de elecciÃ³n aplicables */
+#lista-tipo-eleccion {
+    min-height: 30%;
+    width: 98%;
+}
+
+.tipo-eleccion {
+    border: 1px solid black;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    font-size: 18px;
+    width: 100%;
+    text-decoration: none;
+}
+
+.name-tipo-eleccion {
+    margin-right: auto;
+}
+
+.status {
+    color: gray;
+}
+
+/* Opciones */
+#finalizar-btn {
+    border: 1px solid black;
+    height: 40px;
+    padding: 10px;
+    display: none;
+}
+
+/* Inside */
+#lista-candidatos {
+    max-width: 450px;
+}
+
+.candidato {
+    display: grid;
+    grid-template: auto / minmax(100px, 140px) auto;
+    grid-gap: 5px 5px;
+    border: 1px solid black;
+    padding: 0;
+    font-size: 16px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+h4, p {
+    margin: 5px 0;
+    width: 100%;
+}
+
+.logo-partido {
+    grid-area: 1 / 1 / span 1 / span 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid black;
+}
+
+.logo-partido > img {
+    width: 100%;
+    height: auto;
+}
+
+#candidato-libre {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 16px;
+    align-items: center;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#candidato-libre > h4 {
+    font-size: 12px;
+    display: block;
+}
+
+#candidato-libre > input {
+    width: 100%;
+    text-align: center;
+    height: 40px;
+}
+
+#confirmar-btn {
+    border: 1px solid black;
+    min-height: 40px;
+    padding: 10px;
+}

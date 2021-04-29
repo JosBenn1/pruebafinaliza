@@ -1,0 +1,39 @@
+/* home content */
+
+main {
+    height: calc(100% - var(--header-height) - var(--footer-height));
+}
+
+#ayuda {
+    display: block;
+}
+
+#verify-user {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    min-height: 80%;
+}
+
+#verify-user svg#camera {
+    display: block;
+    max-height: 20px;
+}
+
+#scan-btn {
+    border: 1px solid black;
+    height: 150px;
+    width: 150px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#scan-btn,
+#manual-verify {
+    display: block;
+    margin-bottom: 10px;
+}

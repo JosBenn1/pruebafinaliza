@@ -1,0 +1,42 @@
+main {
+    height: calc(100% - var(--footer-height));
+    display: flex;
+    align-items: flex-start;
+}
+
+h3 {
+    display: block;
+    width: 100%;
+}
+
+#qr {
+
+    max-width: 300px;
+}
+
+#qr img {
+    width: 100%;
+}
+
+/* options */
+#options {
+    max-width: 450px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+p#explicacion {
+    font-size: 18px;
+    display: block;
+}
+
+#ubicar-casilla-btn {
+    border: 1px solid black;
+    background-color: rgb(228, 228, 228);
+    height: 40px;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}

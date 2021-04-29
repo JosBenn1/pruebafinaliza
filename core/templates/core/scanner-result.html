@@ -1,0 +1,46 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Indentificate {% endblock %}
+
+{% block head-extra %}
+    <link rel="stylesheet" href="{% static 'core/css/authentication-style.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <div id="message">
+        <h3>Escaneo exitoso</h3>
+        <p>Por favor, verifica que los datos te correspondan y estén correctos:</p>
+    </div>
+    <div id="user-data">
+        <div class="user-data-element">
+            Nombre: {{ nombre }}
+        </div>
+        <div class="user-data-element">
+            CURP: {{ curp }}
+        </div>
+        <div class="user-data-element">
+            Fecha de nacimiento: {{ fecha_nacimiento }}
+        </div>
+        <div class="user-data-element">
+            Entidad federativa: {{ entidad_federativa }}
+        </div>
+        <div class="user-data-element">
+            Distrito electoral: {{ distrito_electoral }}
+        </div>
+    </div>
+    <div id="captcha">
+        [Captcha code]
+    </div>
+    <div id="user-options">
+        <a href="/procesosElectorales/" class="option-btn confirm">
+            Confirmo que mis datos son correctos
+        </a>
+        <a href="#" class="option-btn deny">
+            Datos incorrectos, prefiero ingresar mis datos manualmente
+        </a>
+    </div>
+</main>
+{% endblock %}

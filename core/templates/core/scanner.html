@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Identificate {% endblock %}
+
+{% block head-extra %}
+    <link  rel="stylesheet" href="{% static 'core/css/authentication-style.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <p>Busca el código QR en el reverso de tu credencial de elector.</p>
+    <ol>
+        <li>Presiona el botón "Abrir escáner QR con cámara."</li>
+        <li>Apunta la imagen de la cámara hacia el código QR y espera unos segundos.</li>
+        <li>Automáticamente se registrará el código y se te dirigirá a una página de confirmación.</li>
+    </ol>
+    <div id="media-wrapper">
+        <div id="imagen-descriptiva">
+            [Imagen descriptiva]
+        </div>
+        <!-- <button id="scanner-btn">
+            Abrir escáner QR con cámara
+        </button>-->
+        <a href="/scannerResult/" id="scanner-btn" class="btn btn-success">Abrir escáner QR con cámara</a>
+    </div>
+</main>
+{% endblock %}

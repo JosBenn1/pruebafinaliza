@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Generar voto {% endblock %}
+
+{% block head-extra %}
+    <link  rel="stylesheet" href="{% static 'core/css/voto-qr-resultado-style.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <h3>Voto digital generado correctamente: </h3>
+    <div id="qr">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/QR_code_for_QRpedia.png" alt="">
+    </div>
+    <div id="options">
+        <p id="explicacion">
+            Si deseas volver a generar tu voto, repite el proceso. El voto que acabas de generar será borrado en cuanto cierres esta página.
+            <br>
+            Este código se ha guardado como imagen en tu dispositivo automáticamente.
+            <br>
+            Dirígete a tu casilla correspondiente y presenta este código para registrar y validar tu voto.
+        </p>
+        <a href="https://www.ine.mx/" id="ubicar-casilla-btn">Ubicar mi casilla</a>
+    </div>
+</main>
+{% endblock %}
