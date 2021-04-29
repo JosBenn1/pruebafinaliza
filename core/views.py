@@ -3,8 +3,6 @@ from django.shortcuts import render, HttpResponse
 # Create your views here.
 def index(request):
     return render(request,"core/index.html")
-    estilo = open("/core/static/css/global-style.css")
-    return HttpResponse(estilo, mimetype="txt/css")
 
 def scanner(request):
     return render(request, "core/scanner.html")
