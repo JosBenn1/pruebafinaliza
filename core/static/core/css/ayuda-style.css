@@ -1,0 +1,18 @@
+main {
+    height: calc(100% - var(--footer-height));
+    display: block !important;
+}
+
+/* menu */
+ol {
+    text-align: left;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* pasos */
+.paso {
+    border-top: 1px solid gray;
+}

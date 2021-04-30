@@ -4,6 +4,9 @@ from django.shortcuts import render, HttpResponse
 def index(request):
     return render(request,"core/index.html")
 
+def ayuda(request):
+    return render(request, "core/ayuda.html")
+
 def scanner(request):
     return render(request, "core/scanner.html")
 

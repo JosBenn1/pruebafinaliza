@@ -20,6 +20,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('', views.index, name="index"),
+    path('ayuda/', views.ayuda, name="ayuda"),
     path('scanner/', views.scanner, name="scanner"),
     path('scannerResult/', views.scannerResult, name="scannerResult"),
     path('procesosElectorales/', views.procesosElectorales, name="procesosElectorales"),

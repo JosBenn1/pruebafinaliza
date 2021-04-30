@@ -1,0 +1,54 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Boleta digital {% endblock %}
+
+{% block head-extra %}
+<link  rel="stylesheet" href="{% static 'core/css/ayuda-style.css' %}" type="txt/css">
+{% endblock %}
+
+{% block content %}
+    <main>
+        <h3>¿Cómo funciona la boleta digital?</h3>
+        <p>Este sitio web tiene como objetivo agilizar los procesos electorales generando una versión digital móvil de tu boleta electoral.</p>
+        <p>De manera general, el proceso es el siguiente:</p>
+        <ol>
+            <a href="#paso-1">
+                <li>Te identificarás con tu credencial de elector.</li>
+            </a>
+            <a href="#paso-2">
+                <li>Seleccionarás tus candidatos de preferencia.</li>
+            </a>
+            <a href="#paso-3">
+                <li>Te otorgaremos tu voto digital en forma de código QR.</li>
+            </a>
+            <a href="#paso-4">
+                <li>Escanearemos tu voto en tu casilla electoral para registrarlo.</li>
+            </a>
+        </ol>
+        <div id="paso-1" class="paso">
+            <h4>Paso 1: Identifícate con tu credencial de elector.</h4>
+            <p>Esto consiste en ingresar tu información escaneando tu credencial con tu cámara haciendo click en "Escanear credencial de elector". Deberás escanear el código que aparece en la parte trasera de tu credencial.</p>
+            <p>Si esto anterior presenta dificultades, puedes ingresar tus datos manualmente haciendo click en "Prefiero ingresar mis datos manualmente"</p>
+            <p>Una vez escaneada tu credencial o ingresados tus datos manualmente, confirma que estén correctos haciendo click en "Confirmo que mis datos son correctos"</p>
+        </div>
+        <div id="paso-2" class="paso">
+            <h4>Paso 2: Abre la boleta y selecciona candidatos</h4>
+            <p>Esto viene después de que te has identificado y confirmado que tus datos son correctos.</p>
+            <p>Entrarás a una página que te presenta los procesos electorales en los que puedes participar. Selecciona aquel en el que desees realizar .</p>
+            <p>Posteriormente, selecciona el tipo de elección (por ejemplo, "Gobernadores", "Diputados", etc.)</p>
+            <p>Lo anterior te llevará a la boleta, donde podrás ver los diferentes candidatos. Haz click en cualquiera para seleccionarlo y luego haz click en "Confirmar y regresar".</p>
+            <p>Repite lo mismo para los otros tipos de elecciones.</p>
+        </div>
+        <div id="paso-3" class="paso">
+            <h4>Paso 3: Obtén to voto digital (código QR)</h4>
+            <p>Una vez que hayas completado todas las secciones (tipos de elecciones), aparecerá en la parte inferior un botón con el texto "Haz click aquí para generar tu voto". Haz click en ese botón para generar tu voto.</p>
+            <p>Se te dirigirá a una página donde podrás ver el código QR. Este código se ha guardado automáticamente en tu aplicación de fotos para que lo puedas consultar en el siguiente paso.</p>
+        </div>
+        <div id="paso-4" class="paso">
+            <h4>Paso 4: Acude a tu casilla y escanea</h4>
+            <p>Ahora que ya tienes tu voto digital, puedes acudir a tu casilla electoral para presentarlo y para que sea escaneado. Al escanearlo, se registra tu voto y has terminado el proceso. </p>
+        </div>
+    </main>
+{% endblock %}
